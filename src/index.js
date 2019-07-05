@@ -19,7 +19,7 @@ function loaderFunction(source) {
 
     // We add Date.now() to our request to avoid caching from the browser.
     return `
-module.exports = fetch(${pubPath} + '?id=' + Date.now())
+module.exports = fetch('${pubPath}?id=' + Date.now())
   .then(function(response) {
     return response.json();
   })
